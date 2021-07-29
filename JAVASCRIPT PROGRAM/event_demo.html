@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+  function display() {
+    alert("Event occured");
+  }
+  function displayName() {
+    alert("event fired")
+
+    var name = document.getElementByName("name").value;
+  }
+  </script>
+</head>
+<body>
+  <input type="button" value="Click Here!" onClick="display()"> <br>
+  <label>Name</label><input type="text" value="John Doe">
+  <input type="button" value="Click Here!" onClick="displayName()"><br>
+</body>
+</html>

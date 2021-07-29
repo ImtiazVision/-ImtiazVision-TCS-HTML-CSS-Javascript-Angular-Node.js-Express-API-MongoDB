@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      // no passing parameter and no return type
+      function myFunction() {
+        alert("Hello World!");
+      }
+      // passing parameter and no return type
+      function add(a, b) {
+        var sum = a + b;
+        alert("Sum of two number is " + sum);
+      }
+
+      // passing parameter and return type
+      function updateSalary(id, name, salary, desg) {
+        if (desg == "Manager") {
+          return salary + 50000;
+        } else if (desg == "Developer") {
+          return salary + 10000;
+        } else {
+          return "No Bonus only salary" + salary;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      myFunction();
+      add(112, 12);
+      var result = updateSalary(100, "John", 20000, "Manager");
+      alert(result);
+    </script>
+  </body>
+</html>
