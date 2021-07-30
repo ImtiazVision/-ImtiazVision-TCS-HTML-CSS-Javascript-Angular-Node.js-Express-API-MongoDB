@@ -63,3 +63,22 @@ dis2();
 // arrow function by default return without return keyword
 var sumOfNumber = (a,b) => a + b;
 document.write("<br> Sum of 2 number is " + sumOfNumber(100,2));
+
+
+// Arrow function with multiple line statement
+
+var findLargestNumber = (a,b,c) => {
+
+  // var largestNumber = a > b ? a : b;
+  // largestNumber = largestNumber > c ? largestNumber : c;
+  // return largestNumber;
+  if (a > b) {
+    return "a is largest";
+  } else if (b > c) {
+    return "b is largest";
+  } else {
+    return "c is largest";
+}
+}
+document.write("<br> find the largest" + findLargestNumber(1,2,3));
+
