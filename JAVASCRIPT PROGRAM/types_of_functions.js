@@ -20,65 +20,82 @@
 // }
 // dis3();
 
-function greetings(fname, callback) {
-  return "Welcome" + callback(fname);
-}
-// Normal Style
-function maleInfo(name) {
-    return "Hello Mr. " + name + "!";
+// function greetings(fname, callback) {
+//   return "Welcome" + callback(fname);
+// }
+// // Normal Style
+// function maleInfo(name) {
+//     return "Hello Mr. " + name + "!";
     
-  }
-// expression style
-var femaleInfo = function(name) {
-    return "Hello Miss" + name + "!";
+//   }
+// // expression style
+// var femaleInfo = function(name) {
+//     return "Hello Miss" + name + "!";
+// }
+
+// document.write(greetings("John", maleInfo));
+// document.write("<br/>");
+// document.write(greetings("Mary", femaleInfo));
+// document.write("<br/>");
+// document.write(greetings("Mike", function(name) {
+//     return "Hello Mr. " + name + "!";
+// }));
+
+// // Arrow function is a shortcut syntax for expression style functions
+
+// var dis1 = function() {
+//   document.write("Expression Function");
+// }
+
+// dis1();
+
+// var addNumber = function(a,b) {
+//   var sum = a + b;
+//   return sum;
+// }
+
+// document.write("<br> sum is " + addNumber(1,2));
+
+
+// // Arrow style function 
+// var dis2 = () => document.write("<br/> This is called arrow function");
+// dis2();
+// // arrow function by default return without return keyword
+// var sumOfNumber = (a,b) => a + b;
+// document.write("<br> Sum of 2 number is " + sumOfNumber(100,2));
+
+
+// // Arrow function with multiple line statement
+
+// var findLargestNumber = (a,b,c) => {
+
+//   // var largestNumber = a > b ? a : b;
+//   // largestNumber = largestNumber > c ? largestNumber : c;
+//   // return largestNumber;
+//   if (a > b) {
+//     return "a is largest";
+//   } else if (b > c) {
+//     return "b is largest";
+//   } else {
+//     return "c is largest";
+// }
+// }
+// document.write("<br> find the largest" + findLargestNumber(1,2,3));
+
+
+function display() {
+  document.write("<br> Normal function execute only if we call");
+  document.write("<br> we can call the function from script or from html using eve");
 }
+  display();
+  display();
+  display();
 
-document.write(greetings("John", maleInfo));
-document.write("<br/>");
-document.write(greetings("Mary", femaleInfo));
-document.write("<br/>");
-document.write(greetings("Mike", function(name) {
-    return "Hello Mr. " + name + "!";
-}));
+  // IIFE function
+  // Syntax 
+  (function(a,b) {
+    var sum = a + b;
+    document.write("<br> sum of two number is" + sum);
+  })(10,20);
 
-// Arrow function is a shortcut syntax for expression style functions
-
-var dis1 = function() {
-  document.write("Expression Function");
-}
-
-dis1();
-
-var addNumber = function(a,b) {
-  var sum = a + b;
-  return sum;
-}
-
-document.write("<br> sum is " + addNumber(1,2));
-
-
-// Arrow style function 
-var dis2 = () => document.write("<br/> This is called arrow function");
-dis2();
-// arrow function by default return without return keyword
-var sumOfNumber = (a,b) => a + b;
-document.write("<br> Sum of 2 number is " + sumOfNumber(100,2));
-
-
-// Arrow function with multiple line statement
-
-var findLargestNumber = (a,b,c) => {
-
-  // var largestNumber = a > b ? a : b;
-  // largestNumber = largestNumber > c ? largestNumber : c;
-  // return largestNumber;
-  if (a > b) {
-    return "a is largest";
-  } else if (b > c) {
-    return "b is largest";
-  } else {
-    return "c is largest";
-}
-}
-document.write("<br> find the largest" + findLargestNumber(1,2,3));
-
+// IIFE (immediate Invoke function expression)
