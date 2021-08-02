@@ -134,5 +134,11 @@ document.write("<br/> age is " + emp1.age)
 
 // Web Service: Giving the service for web application when both application and web service are running on different technologies.
 
-// SOAP(Simple object Access Protocol) Web Service: We can consume and produce only in XML format.
+// SOAP(Simple object Access Protocol) Web Service: We can consume and produce only in XML format.XML is very heavy and complex and data intensive.
 // RESTful Web Service: We can consume and produce data in any format like JSON,html,text, XML, CSV, etc or any other format.
+
+// JSON: Javascript Object Notation: store data in  the form of key-value pair where key must be in double quotes and must be a string and unique  while  value may be number, string, boolean,array,complex object. 
+
+// Map syntax is language specific.Map in Python is different from Map in Java/C++/Javascript.
+
+{"key1":value1, "key2":value2 }
