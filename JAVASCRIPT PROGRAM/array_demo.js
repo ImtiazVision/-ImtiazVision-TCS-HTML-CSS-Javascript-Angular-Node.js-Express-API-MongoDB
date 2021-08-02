@@ -58,3 +58,8 @@ var result1 = num1.find(function(e){
 document.write("<br> Result1 is " + result1);
 document.write("<br> Result1 is " + result2);
 
+document.write(num);
+document.write("<br>");
+// 1st parameter index position, 2nd parameter number of element to delete
+num1.splice(2)
+
