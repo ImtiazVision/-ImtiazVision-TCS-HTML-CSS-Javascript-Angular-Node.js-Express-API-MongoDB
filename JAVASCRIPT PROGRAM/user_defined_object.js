@@ -27,10 +27,10 @@
 //       document.write(emp1.fname);
 //       emp1.dis();
 
-// ES5 Function systax
+// ES5 parameter constructor(function) concept
 
-function Employee() {
-  this.id = 100;
+function Employee(id, name, salary) {
+  this.id = id;
   this.name = "John Doe";
   this.role = "employee";
   this.age = "25";
@@ -52,3 +52,8 @@ var emp1 = new Employee(); // memory created
 
 emp1.dis(); // we can call behavior
 alert(emp1.id); // we can access property
+
+var emp1 = new Employee(100,"John",10000); // memory created
+var emp2 = new Employee(100,"MIke",10400); // memory created
+emp1.dis(); // we can access property
+emp2.dis(); // we can access property
