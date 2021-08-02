@@ -130,3 +130,9 @@ document.write("<br/> age is " + emp1.age)
 // function style object creation 
 // literal style object creation 
 // class style object creation
+
+
+// Web Service: Giving the service for web application when both application and web service are running on different technologies.
+
+// SOAP(Simple object Access Protocol) Web Service: We can consume and produce only in XML format.
+// RESTful Web Service: We can consume and produce data in any format like JSON,html,text, XML, CSV, etc or any other format.
