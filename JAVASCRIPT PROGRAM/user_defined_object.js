@@ -54,7 +54,7 @@
 // alert(emp1.id); // we can access property
 
 // var emp1 = new Employee(100,"John",10000); // memory created
-// var emp2 = new Employee(100,"MIke",10400); // memory created
+// var emp2 = new Employee(100,"Mike",10400); // memory created
 // emp1.dis(); // we can access property
 // emp2.dis(); // we can access property
 
@@ -80,15 +80,36 @@
 // WE will use ES6 in Angular 
 
 
+// class Employee {
+//   id = 100;
+//   name = "Raj"
+//   salary = 12000;       // not require this keyword. 
+//   dis() {             // not require this keyword 
+//     document.write("<br/>id is " + this.id);   // to access we have to use this keyword
+//     document.write("<br/>name is " + this.name);
+//     document.write("<br/>salary is " + this.salary);
+//   }
+// }
+// let emp1 = new Employee();
+// emp1.dis();
+// let emp2 = new Employee();
+// emp2.dis();
+
+// Constructor example
 class Employee {
-  id = 100;
-  name = "Raj"
-  salary = 12000;       // not require this keyword. 
-  dis() {             // not require this keyword 
-    document.write("<br/>id is " + this.id);   // to access we have to use this keyword
+  constructor(id, name, salary) {
+    this.id = id;
+    this.name = name;
+    this.salary = salary; // initialize salary
+  }
+  dis() {
+    document.write("<br/>id is " + this.id);
     document.write("<br/>name is " + this.name);
     document.write("<br/>salary is " + this.salary);
   }
-}
-let emp1 = new Employee();
+} 
+
+let emp1 = new Employee(100,"John",10000);
+let emp2 = new Employee(200,"Mike",10400);
 emp1.dis();
+emp2.dis();
