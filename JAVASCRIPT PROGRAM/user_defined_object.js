@@ -2,7 +2,7 @@
 
 // function Employee() {
 //   this.role = "employee";
-//   var fname = "Homistan";
+//   var fname = "Jonathan";
 //   this.age = "25";
 //   this.job = "Software Engineer";
 //   this.salary = "100000";
