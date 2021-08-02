@@ -3,7 +3,7 @@ a = 20;
 var a = 30;
 let b = 40;
 b = 50;
-//let b=60;
+// let b=60; // error because b is already declared
 for (var i = 0; i < 10000; i++) {
 }
 document.write("<br> VAlue of i is " + i);
