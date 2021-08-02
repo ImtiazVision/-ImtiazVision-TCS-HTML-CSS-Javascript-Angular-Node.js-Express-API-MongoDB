@@ -45,3 +45,4 @@ document.write("<br/>Id is " + empJson.id)
 document.write("<br>name is " + empJson.name)
 document.write("<br/>Age is " + empJson.age)
 document.write("<br/>Result is " + empJson.result)
+

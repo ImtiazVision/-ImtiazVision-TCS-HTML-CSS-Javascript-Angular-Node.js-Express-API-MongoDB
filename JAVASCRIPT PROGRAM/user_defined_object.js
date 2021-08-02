@@ -131,6 +131,14 @@ document.write("<br/> age is " + emp1.age)
 // literal style object creation 
 // class style object creation
 
+// Constructor is like a special function which helps to create the memory. 
+
+// Get used to ES6 because it is more used & popular.It also has simpler syntax.
+
+// Important links about Javascript Callback functions:
+
+// https://www.javascripttutorial.net/javascript-callback/ 
+
 
 // Web Service: Giving the service for web application when both application and web service are running on different technologies.
 
