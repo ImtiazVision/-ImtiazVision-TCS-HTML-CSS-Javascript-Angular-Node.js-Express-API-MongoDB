@@ -96,34 +96,34 @@
 // emp2.dis();
 
 // Constructor example
-class Employee {
-  constructor(id, name="Unknown", salary=100000) {
-    this.id = id;
-    this.name = name;
-    this.salary = salary; // initialize salary
-  }
-  dis() {
-    document.write("<br/>id is " + this.id);
-    document.write("<br/>name is " + this.name);
-    document.write("<br/>salary is " + this.salary);
-  }
-} 
+// class Employee {
+//   constructor(id, name="Unknown", salary=100000) {
+//     this.id = id;
+//     this.name = name;
+//     this.salary = salary; // initialize salary
+//   }
+//   dis() {
+//     document.write("<br/>id is " + this.id);
+//     document.write("<br/>name is " + this.name);
+//     document.write("<br/>salary is " + this.salary);
+//   }
+// } 
 
-let emp1 = new Employee(100,"John",10000);
-let emp2 = new Employee(200,"Mike",10400);
-let emp3 = new Employee(200,"Mike");
-let emp4 = new Employee();
-emp1.dis();
-emp2.dis();
-emp3.dis();
-emp4.dis();
+// let emp1 = new Employee(100,"John",10000);
+// let emp2 = new Employee(200,"Mike",10400);
+// let emp3 = new Employee(200,"Mike");
+// let emp4 = new Employee();
+// emp1.dis();
+// emp2.dis();
+// emp3.dis();
+// emp4.dis();
 
 // literal style object creation from ES5 style syntax. we used this when we want object with only property but no behavior
 
-let emp1 = { id: 100, name: "Ramesh", age: 21 };
-document.write("<br/>id is " + emp1.id)
-document.write("<br/>Name is " + emp1.name)
-document.write("<br/> age is " + emp1.age)
+// let emp1 = { id: 100, name: "Ramesh", age: 21 };
+// document.write("<br/>id is " + emp1.id)
+// document.write("<br/>Name is " + emp1.name)
+// document.write("<br/> age is " + emp1.age)
 
 // https://www.geeksforgeeks.org/creating-objects-in-javascript-4-different-ways/ 
 // https://www.w3schools.com/js/js_obj_literal.asp 
@@ -149,4 +149,4 @@ document.write("<br/> age is " + emp1.age)
 
 // Map syntax is language specific.Map in Python is different from Map in Java/C++/Javascript.
 
-{"key1":value1, "key2":value2 }
+// {"key1":value1, "key2":value2 }
