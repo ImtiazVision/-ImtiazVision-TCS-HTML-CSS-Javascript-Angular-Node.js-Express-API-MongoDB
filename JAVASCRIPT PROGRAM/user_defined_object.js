@@ -117,3 +117,10 @@ emp1.dis();
 emp2.dis();
 emp3.dis();
 emp4.dis();
+
+// literal style object creation from ES5 style syntax
+
+let emp1 = { id: 100, name: "Ramesh", age: 21 };
+document.write("<br/>id is " + emp1.id)
+document.write("<br/>Name is " + emp1.name)
+document.write("<br/> age is " + emp1.age)
