@@ -60,12 +60,20 @@
 
       // Creating a wh
 
-      document.write("<br/> This is a while loop");
+      // document.write("<br/> This is a while loop");
+      // let i = 0;
+      // while (i < 5) {
+      //   document.write("<br> i is" + i);
+      //   i++;
+      // }
+      document.write("<br/> This is a do while loop");
       let i = 0;
-      while (i < 5) {
-        document.write("<br> i is" + i);
-        i++;
-      }
+      do {
+        if (i % 2 == 0) 
+          document.write("<br> i is" + i);
+          i++;
+        } while (i < 5);
+      
     </script>
   </body>
 </html>
