@@ -20,7 +20,7 @@
 // alert ("Welcome to an external javascript file");
 
 function addData(){
-  alert ("Event fired!!!" + " " + "welcome to Javascript");
+  // alert ("Event fired!!!" + " " + "welcome to Javascript");
   // This will create a p tag for the name and age
   var name = document.getElementById("name").value;
   // document.write(name);
