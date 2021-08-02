@@ -118,9 +118,15 @@ emp2.dis();
 emp3.dis();
 emp4.dis();
 
-// literal style object creation from ES5 style syntax
+// literal style object creation from ES5 style syntax. we used this when we want object with only property but no behavior
 
 let emp1 = { id: 100, name: "Ramesh", age: 21 };
 document.write("<br/>id is " + emp1.id)
 document.write("<br/>Name is " + emp1.name)
 document.write("<br/> age is " + emp1.age)
+
+// https://www.geeksforgeeks.org/creating-objects-in-javascript-4-different-ways/ 
+// https://www.w3schools.com/js/js_obj_literal.asp 
+// function style object creation 
+// literal style object creation 
+// class style object creation
