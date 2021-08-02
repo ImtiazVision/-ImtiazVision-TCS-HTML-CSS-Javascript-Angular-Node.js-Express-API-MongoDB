@@ -97,7 +97,7 @@
 
 // Constructor example
 class Employee {
-  constructor(id, name, salary) {
+  constructor(id, name="Unknown", salary=100000) {
     this.id = id;
     this.name = name;
     this.salary = salary; // initialize salary
@@ -111,5 +111,9 @@ class Employee {
 
 let emp1 = new Employee(100,"John",10000);
 let emp2 = new Employee(200,"Mike",10400);
+let emp3 = new Employee(200,"Mike");
+let emp4 = new Employee();
 emp1.dis();
 emp2.dis();
+emp3.dis();
+emp4.dis();
