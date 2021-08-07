@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+
+      div {
+        /* border: 10px solid #4a4983; */
+      }
+
+      .container {
+        border: 10px solid rgb(61, 39, 158);
+
+      }
+
+      .col-4 {
+        border: 10px solid rgb(53, 53, 155);
+      }
+
+      .nav-bar {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+      }
+
+      ul,
+      a {
+        list-style: none;
+        text-align: center;
+        border: 0;
+        padding: 0;
+        text-decoration: none;
+
+      }
+
+      li {
+        /* display: inline-block; */
+        float: right;
+        margin: 8px;
+        padding: 8px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 20px;
+        grid-column-gap: 100px;
+        /* border: 10px solid #6f289e; */
+      }
+
+      .grid-item {
+        padding: 20px;
+        text-align: center;
+        border: 10px solid #6f289e;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+
+    <h2>Simply Blogging </h2>
+    <div class="nav-bar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Add Blog</a></li>
+        <li><a href="">Contacts</a></li>
+        <li><a href="">About Us</a></li>
+        </u>
+    </div>
+    <!-- <form action="/" name="myForm" onsubmit="return validateForm()" method="post" required>
+      <label for="title">Title:</label><br>
+      <input type="text" id="title" name="title" value="Enter Title"><br>
+      <label for="article">Article:</label><br>
+      <textarea id="article" name="article" placeholder="Enter article here.." rows="6" cols="30"></textarea><br><br> -->
+      <!-- <input type="text" id="article" name="article" value="Enter article name "><br><br> -->
+      <!-- <label for="image">Add image via URL (optional)</label><br>
+      <input type="file" id="myFile" name="filename"><br><br> -->
+      <!-- <input type="submit"> -->
+      <!-- <input type="submit" value="Add Blog" style="background-color: aquamarine; color: rgb(9, 8, 17); border: 1px solid aquamarine; border-radius:5px; padding: 2px 4px 4px 4px"> -->
+      <!-- <input type="button" value="Add Blog" class="btn btn-success" onclick="myFunction()" /><br> -->
+      
+      <div class="form-group">
+        <div class="row">
+          <div class="col-2"><label>Title</label></div>
+          <div class="col-3"><input type="text" name="user" class="form-control" placeholder="Enter article title here.."/></div> <br><br>
+        </div>
+        <div class="row">
+          <div class="col-2"><label>Article</label></div>
+          <div class="col-3"><textarea id="article" name="article" placeholder="Enter article here.." rows="6" cols="30"class="form-control"></textarea></div>
+        </div> <br><br>
+        <div class="row">
+        <div class="col-2"><label>Image</label></div>
+        <div class="col-3"><input type="text" name="user" class="form-control" placeholder="Enter image URL here.."/></div><br><br><br>
+        </div>
+        <div class="row">
+          <div class="col-2"><input type="submit" value="Add Blog" class="btn btn-success" "onclick="myFunction()" /></div>
+          <div class="col-2"><input type="reset" value="Reset" class="btn btn-info" /></div>
+        </div>
+      </form>
+    </div>
+    </form>
+    <br>
+    <br>
+
+    <!-- <div class="grid-container">
+      <div class="grid-item">
+        <h3>Blog Title</h3>
+        <h3>Article</h3>
+        <h3>Image</h3>
+      </div>
+      <div class="grid-item">
+        <h3>Blog Title</h3>
+        <h3>Article</h3>
+        <h3>Image</h3>
+      </div>
+      <div class="grid-item">
+        <h3>Blog Title</h3>
+        <h3>Article</h3>
+        <h3>Image</h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <h3>Blog Title</h3>
+          <h3>Article</h3>
+          <h3>Image</h3>
+        </div>
+        <div class="col-4">
+          <h3>Blog Title</h3>
+          <h3>Article</h3>
+          <h3>Image</h3>
+        </div>
+        <div class="col-4">
+          <h3>Blog Title</h3>
+          <h3>Article</h3>
+          <h3>Image</h3>
+        </div>
+      </div>
+    </div> -->
+
+
+    <script>
+      function validateForm() {
+        var x = document.forms["myForm"]["title"].value;
+        if (x == "") {
+          alert("Title must be filled out");
+          return false;
+        }
+        function myFunction() {
+          var count = 0;
+          var y = document.createElement("grid-container");
+          y.id = count;
+          document.getElementById("grid-container").appendChild(y);
+          document.getElementById(y.id).innerHTML = "some text";
+          count++;
+        }
+
+        document.createElement("imgTag");
+        imgTag.setAttribute("src", "img/www.google.com");
+
+    </script>
+  </body>
+
+</html>
