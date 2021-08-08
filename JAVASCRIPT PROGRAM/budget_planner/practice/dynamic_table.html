@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Dynamically Add/Remove Table Rows</h1>
+    <form action="">
+      <div class="input-row">
+        <p>Employee Name</p>
+        <input type="text" id="employee_name" name="url" placeholder="Enter employee name here">
+      </div>
+      <div class="input-row">
+      <p>Project Name</p>
+      <input type="text" id="project_name" name="url" placeholder="Enter employee name here">
+      </div>
+      <div class="input-row">
+      <p>Salary</p>
+      <input type="text" id="salary" name="salary" placeholder="Enter salary here">
+      </div>
+      <br>
+      <button>Submit</button>
+    </form>
+    <br>
+    <table border="1" cellpadding="8" cellspacing="1">
+      <thead>
+        <tbody>
+        <tr>
+          <th>Employee Name</th>
+          <th>Project Name</th>
+          <th>Salary</th>
+        </tr>
+        </tbody>
+      </thead>
+    </table>
+    <script>
+      const form = document.querySelector('form');
+
+      function onAddProject(e) {
+
+
+      form.addEventListener('submit', onAddProject); 
+    </script>
+  </body>
+</html>
