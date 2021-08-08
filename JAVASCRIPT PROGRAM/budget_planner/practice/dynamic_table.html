@@ -42,9 +42,10 @@
       const form = document.querySelector('form');
 
       function onAddProject(e) {
-
-
+        e.preventDefault();
+        alert("this works");
       form.addEventListener('submit', onAddProject); 
+      }
     </script>
   </body>
 </html>
