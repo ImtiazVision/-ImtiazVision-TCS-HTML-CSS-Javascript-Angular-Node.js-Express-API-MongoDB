@@ -80,8 +80,40 @@ var addNumber = function(a,b){
 document.write("<br> Sum is " + addNumber(344,543));
 
 
+
+
 // However, this is Arrow style function. The difference is that the function keyword is removed and replaced with () => an arrow and we don't need the curly braces.
 var dis2 = () =>
   document.write("Arrow style function");
 
 dis2();
+
+// Now we are showing the result on the browser using Arrow function. Here, we got rid of the function keyword and replaced it with (a,b) => an arrow followed by function body where a and b are added.
+
+// We don't have to explicitly write return keyword inside the arrow function because Arrow function by default return input without the return keyword invokation.
+
+
+var sumOfNumber = (a, b) => a + b; // one line code instead of the 3 lines code like followings:
+
+// var addNumber = function (a, b) {
+//   var sum = a + b;
+//   return sum;
+// }
+
+
+// Here, we are displaying the result of the Arrow function on the browser using document.write function.
+
+document.write("<br><br> Sum of two number is " + sumOfNumber(994, 5647));
+
+
+// Arrow function with multiple line statement 
+
+var findLargest = (a,b) => {
+  if(a > b)
+    return "a is largest";
+  else {
+    return "b is largest";
+  }
+}
+
+document.write("<br> Largest number is " + findLargest(9,5));
