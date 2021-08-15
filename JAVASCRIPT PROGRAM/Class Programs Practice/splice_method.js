@@ -24,4 +24,4 @@ document.write("<br><br> The array after the deletion of 2nd indexed element i.e
 
 num2.splice(2,0,200,330,441);
 
-document.write("<br><br> The array after adding 200,330,and 441 in place of the poited/mentioned index location of the array elements <br><br>" + num2);
+document.write("<br><br> The array after adding 200,330,and 441 in place of the poited/mentioned index location of the array elements while deleting none of the elements:  <br><br>" + num2);
