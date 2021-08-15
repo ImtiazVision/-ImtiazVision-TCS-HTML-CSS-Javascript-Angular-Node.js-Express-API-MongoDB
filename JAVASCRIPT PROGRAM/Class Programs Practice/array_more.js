@@ -28,7 +28,10 @@ document.write("<br>The array after removing the element 34 that happens to be t
 
 // Find function will take callback function as parameter and look for each element in the array. If the element is in the array, it will return it and otherwise it will return undefined. 
 
-var result1 = num1.find(e=> e == 10);
+// var result1 = num1.find(e=> e == 10);
+var result1 = num1.find(function(e){
+  return e == 10;
+});
 var result2 = num1.find(e=> e == 3);
 
 // Now we are showing the result of the find function on the browser window.
