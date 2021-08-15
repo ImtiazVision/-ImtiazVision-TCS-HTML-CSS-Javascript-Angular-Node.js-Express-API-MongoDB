@@ -14,4 +14,11 @@ document.write("<br>Search the set and see if Mike is available or not and if no
 document.write("<br>To delete an element of the set, we can use ss.delete method");
 ss.delete("Rahim");
 
-document.write("<br>After deleting the Rahim element, the set looks like this: "+ ss +"<br>");
+document.write("<br>After deleting the Rahim element, the set size looks like this: "+ ss.size +"<br>");
+
+// we are using of loop now
+for (s of ss){
+  document.write("<br>Set elements value is: "+ s +"<br>");
+}
+document.write("Using Arrow with Callback and forEach() function");
+ss.forEach(v=>document.write("<br> Value is "+ v));
