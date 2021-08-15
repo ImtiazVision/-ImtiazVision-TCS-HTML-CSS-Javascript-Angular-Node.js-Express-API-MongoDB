@@ -1,0 +1,11 @@
+var num = 100;
+var fname = "Imtiaz";
+var age = 21;
+var msg = true;
+var info = 1001;
+info = "John";
+console.log("num value is " + num);
+console.log("fname value is " + fname);
+console.log("age value is " + age);
+console.log("msg value is " + msg);
+console.log("info value is " + info);

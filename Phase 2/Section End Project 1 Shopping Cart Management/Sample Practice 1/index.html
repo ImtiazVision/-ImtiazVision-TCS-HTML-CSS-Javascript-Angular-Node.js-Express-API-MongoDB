@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Items To Cart</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+  
+<!-- JS Code for switching pages -->
+<script>
+  function show(shown, hidden) {
+    document.getElementById(shown).style.display='block';
+    document.getElementById(hidden).style.display='none';
+    return false;
+  }
+    
+<!-- typescript file -->
+  // </script>cart.ts</script>
+
+
+  <style>
+body {
+    font-family: 'Pangolin';
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    background-color: #54afda;
+}
+
+input {
+    font-family: 'Pangolin';
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1em;
+    border: 1px solid;
+}
+
+button {
+    font-family: 'Pangolin';
+    padding: 0.5em;
+    font-size: 1em;
+    margin: 0.5em;
+    min-width: 3em;
+    border: 1px solid;
+    border-radius: 12px;
+    background-color: #eee;
+}
+
+#items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#items > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  </style>
+</head>
+
+<body>
+  <div class="page" id="cart1">
+    <h1>Please enter the name of the item and the price of the item that you are buying</h1>
+    <form id="addItem" style="font-size: 16px;">
+      <label style="font-size: 16px;">
+        Item Name:
+        <input id="name" type="text" placeholder="Item Name">
+      </label>
+      <label style="font-size: 16px;">
+      </br>
+        Item Price:
+        <input id="price" type="number" step="0.01" placeholder="Item Price">
+      </label>
+      <button id="addItem" type="submit">Add Item</button>
+    </form>
+
+    <ul id="items">
+      <!-- Items here -->
+    </ul>
+    <button><a href="#cart2" onclick="return show('cart2','cart1');">Checkout</a></button>
+  </div>
+
+  <div class="page" id="cart2" style="display:none;">
+    <!-- Page2 -->
+    <h1>Total Price (Dollars)
+      <div id="total" style="text-align:center;">
+        <h1>0.00</h1>
+      </div></h1>
+      <button><a href="#cart1" onclick="return show('cart1','cart2');">Go Back</a></button>
+  <!-- <a href="cart2.html" target="_blank">Click here for the total price</a> -->
+  </div>
+
+<!-- JS Code inside, because my VS Code started acting up -->
+  <script>
+    document.querySelector('body').onclick = (e) => {
+    // console.log('---------------------------------')
+    console.log(e.target)
+    }
+
+    const addItem = document.getElementById('addItem')
+    const inputName = document.getElementById('name')
+    const inputPrice = document.getElementById('price')
+    const listItem = document.getElementById('items')
+    const divTotal = document.getElementById('total')
+
+    const cart = []
+
+    addItem.onsubmit = function(e) {
+    e.preventDefault()
+    const name = inputName.value
+    const price = inputPrice.value
+
+    addToCart(name, price)
+    showCart()
+    }
+
+    listItem.onclick = function(e) {
+    console.log(e.target)
+    if (e.target && e.target.classList.contains('remove')) {
+        console.log(e.target.dataset.name)
+        removeFromCart(e.target.dataset.name)
+    }
+    }
+
+    listItem.onchange = function(e) {
+    if (e.target && e.target.classList.contains('update')) {
+        const quantity = parseInt(e.target.value)
+        const name = e.target.dataset.name
+        updateCart(name, quantity)
+
+    }
+    }
+
+    function addToCart(name, price) {
+    for (let i = 0; i < cart.length; i += 1) {
+        if (cart[i].name === name) {
+        cart[i].quantity += 1
+        showCart()
+        return true
+        }
+    }
+    cart.push({ name, price, quantity: 1})
+    showCart()
+    }
+
+    function removeFromCart(name, quantity = 0) {
+    console.log(name, quantity)
+    for (let i = 0; i < cart.length; i += 1) {
+        if (cart[i].name === name) {
+        if (quantity) {
+            let newquantity = cart[i].quantity - quantity
+            if (newquantity > 0) {
+            cart[i].quantity = newquantity
+            } else {
+            cart.splice(i, 1)
+            }
+        } else {
+            cart.splice(i, 1)
+        }
+              }
+            }
+
+            showCart()
+          }
+
+      function showCart() {
+        let str = ''
+        for (let i = 0; i < cart.length; i += 1) {
+          str += `<li>
+            <span>
+              ${cart[i].name} -> $${cart[i].price} each
+              * ${cart[i].quantity} = $${(cart[i].quantity * cart[i].price).toFixed(2)}
+            </span>
+            <span>
+              <button class="remove" data-name="${cart[i].name}">remove</button>
+            </span>
+          </li>`
+        }
+        listItem.innerHTML = str
+        divTotal.innerHTML = getTotal()
+      }
+
+      function getTotal() {
+        let total = 0
+        for (let i = 0; i < cart.length; i += 1) {
+          total += cart[i].price * cart[i].quantity
+        }
+        return total.toFixed(2)
+      }
+
+      function updateCart(name, quantity) {
+        for (let i = 0; i < cart.length; i += 1) {
+          if (cart[i].name === name) {
+            cart[i].quantity = quantity
+            showCart()
+            return true
+          }
+        }
+        return false
+      }
+
+      showCart()
+
+      getTotal()
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="menu_operation1.js"></script>
+</head>
+<body>
+  <h2>Add Details and Info</h2>
+  <!--Using id/name selector,we can retrieve/receive Name in the Javascript file -->
+  Name : <input type="text" id="name"><br>
+  Age : <input type="text" id="age"><br><br>
+
+  <!--Now we are planning to get the value of Name and Age text field once we click on the Add Data button. This can be achieved through document.getElementById and providing the id_name.value in the Javascript file.-->
+  
+  <input type="button" value="Add Data" onclick="addData()">
+  <hr>
+  <!-- To append the data, we created an empty div tag with an id called "info". We are planning to add the content inside the div tag to display them.  -->
+
+  <div id="info">
+
+  </div>
+</body>
+</html>
