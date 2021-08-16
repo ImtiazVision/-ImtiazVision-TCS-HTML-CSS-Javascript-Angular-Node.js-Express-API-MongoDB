@@ -1,4 +1,6 @@
 var mm = new Map();
+
+document.write("Map: is a type of collection or data structure that helps to store data in the form of key-value pairs. Key is unique and value may have duplicates.");
 // mm.set() method store information in the map
 
 // key value pair where key must be unique and value can have duplicates. In the following example,the first one is key and the 2nd value is the value.
