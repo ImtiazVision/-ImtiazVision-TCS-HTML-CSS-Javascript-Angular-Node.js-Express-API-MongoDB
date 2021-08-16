@@ -34,3 +34,9 @@ document.write("<br><br> If we don't want to get the keys but rather willing to 
 for(var v of mm.values()){
     document.write("<br>Values: "+v);
 } 
+
+// If we want to get the key value pairs, we can use .entries() function
+document.write("<br><br> If we want to get the key value pairs, we can use .entries() function:<br>");
+for(var e of mm.entries()){
+    document.write("<br>Key Value Pairs: "+e);
+}
