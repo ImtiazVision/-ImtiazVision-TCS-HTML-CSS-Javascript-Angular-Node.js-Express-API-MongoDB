@@ -28,3 +28,9 @@ for(var k of mm.keys()){
     // document.write("<br>Keys: "+k);
     document.write("<br>Keys: "+k + " Values: "+mm.get(k));
 }
+
+// If we don't want to get the keys but rather willing to get the values, use .values() function
+document.write("<br><br> If we don't want to get the keys but rather willing to get the values, use .values() function:<br>");
+for(var v of mm.values()){
+    document.write("<br>Values: "+v);
+} 
