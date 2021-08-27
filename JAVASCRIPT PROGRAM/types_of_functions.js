@@ -1,3 +1,7 @@
+
+
+
+
 // // normal function
 
 // function display() {
@@ -83,19 +87,19 @@
 // document.write("<br> find the largest" + findLargestNumber(1,2,3));
 
 
-function display() {
-  document.write("<br> Normal function execute only if we call");
-  document.write("<br> we can call the function from script or from html using eve");
-}
-  display();
-  display();
-  display();
+// function display() {
+//   document.write("<br> Normal function execute only if we call");
+//   document.write("<br> we can call the function from script or from html using eve");
+// }
+//   display();
+//   display();
+//   display();
 
-  // IIFE function
-  // Syntax 
-  (function(a,b) {
-    var sum = a + b;
-    document.write("<br> sum of two number is" + sum);
-  })(10,20);
+//   // IIFE function
+//   // Syntax 
+//   (function(a,b) {
+//     var sum = a + b;
+//     document.write("<br> sum of two number is" + sum);
+//   })(10,20);
 
 // IIFE (immediate Invoke function expression)

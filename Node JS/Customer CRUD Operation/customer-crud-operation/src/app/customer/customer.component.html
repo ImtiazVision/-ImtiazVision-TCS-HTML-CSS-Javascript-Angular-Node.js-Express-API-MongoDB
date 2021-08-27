@@ -1,0 +1,53 @@
+<!-- <div>
+  <form [formGroup]="customerRef" (ngSubmit)="storeInfo()">
+    <label>Customer Id</label>
+    <input type='text' formControlName="cid"><br>
+    <label>Customer Name</label>
+    <input type='text' formControlName="cname"><br>
+    <label>Customer Age</label>
+    <input type='text' formControlName="age"><br>
+    <input type="submit" value="Store Customer Info">
+    <input type="reset" value="Reset">
+  </form>
+</div> -->
+<div>
+    <form [formGroup]="customerRef" (ngSubmit)="storeInfo()">
+        <label>Customer Id</label>
+        <input type="text" formControlName="cid"/><br/>
+        <label>Customer Name</label>
+        <input type="text" formControlName="cname"/><br/>
+        <label>Customer Age</label>
+        <input type="text" formControlName="age"/><br/>
+        <input type="submit" value="Store Customer Info"/>
+        <input type="reset" value="Reset"/>
+    </form>
+    <br>
+    <span style="color:red">{{storeMsg}}</span>
+    <hr>
+    <!-- <table border="1">
+        <tr>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Customer Age</th>
+        </tr>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.cid}}</td>
+            <td>{{customer.cname}}</td>
+            <td>{{customer.age}}</td>
+        </tr>
+    </table> -->
+    <table border="1">
+            <tr>
+                <th>Customer Id</th>
+                <th>Customer Name</th>
+                <th>Customer Age</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor="let customer of customers">
+                <td>{{customer.cid}}</td>
+                <td>{{customer.cname}}</td>
+                <td>{{customer.age}}</td>
+                <td><input type="button" value="Delete" (click)="deleteRec(customer.cid)"/></td>
+            </tr>
+    </table>
+</div>

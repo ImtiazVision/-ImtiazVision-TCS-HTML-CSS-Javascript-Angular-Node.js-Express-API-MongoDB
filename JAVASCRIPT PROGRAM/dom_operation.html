@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="menu_operation.js"> 
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  </script>
+  </head>
+<body>
+  <h2>Add Details</h2>
+  <!--Now we are creating dynamic content from user input via input field like name and age-->
+  Name: <input type="text" id="name"><br>
+  Age: <input type="text" id="age"><br>
+  <input type="button" value="Add Data" onclick="addData()">
+  <hr>
+  <!--Here we are creating an empty div tag to append the data inside this div tag from the external js file named "menu_operation.js"-->
+  <div id="data">
+    
+  </div>
+</body>
+</html>

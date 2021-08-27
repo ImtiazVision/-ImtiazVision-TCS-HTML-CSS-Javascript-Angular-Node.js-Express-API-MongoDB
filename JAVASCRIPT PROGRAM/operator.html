@@ -12,12 +12,15 @@
   var b = 20;
   document.write(a + b);
   document.write("== <br/>");
-  document.write(a == b);
+  document.write(a == b); // check only value
   document.write("== <br/>");
-  document.write(a === b);
+  document.write(a === b); // check value as well as data type
   var n;
   document.write("<br/>Value is " + n);
   document.write("<br/>Data type os n is "+ typeof(n));
+  var n = new Date();
+  document.write("<br/>Value is " + n);
+  document.write("<br>Data type of n is: "+ typeof(n));
   // Ternary operators 
   var x = 10;
   var y = 20;
