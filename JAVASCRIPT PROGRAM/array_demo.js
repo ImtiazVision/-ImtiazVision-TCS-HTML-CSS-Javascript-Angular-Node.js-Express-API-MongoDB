@@ -1,37 +1,56 @@
+var num1= [10, 20, 30, 40, 50,60,70,80,90,100];
+document.write(num1+ "<br><br>");
+document.write("<br>");
+num1.pop(); // remove the last element of the array
+document.write(num1+ "<br><br>");
+document.write("<br>");
+num1.shift(); // remove the first element of the array
+document.write(num1+ "<br><br>");
+document.write("<br>");
+num1.unshift(0); // add element at the beginning of the array
+document.write(num1+ "<br><br>");
+document.write("<br>");
+num1.push(110); // add element at the end of the array
+document.write(num1+ "<br><br>");
+// Splice method 
+// Fist parameter is the index where the new element is to be inserted and second parameter is the number of elements to be deleted
+num1.splice(0,1);
+document.write(num1+ "<br><br>");
+
+
+
+
+
+
+
+
 // function basics
-function func() { // function declaration
-  document.write("this is a function<br><br>");
-  } 
-  // this is the function call
-  func();
+// function func() { // function declaration
+//   document.write("this is a function<br><br>");
+//   } 
+//   // this is the function call
+//   func();
 
-  function Employee(){ // function/class constructor and by convention the name of the function should be capitalized
-    this.name = "John"; // this is the property of the object
-    this.age = 30;  // this is the property of the object     
-    this.salary = 25000; // They are also known as user defined properties/object
-    this.dis = function(){
-      document.write("Name: "+this.name+"<br>");
-      document.write("Age: "+this.age+"<br>");
-      document.write("Salary: "+this.salary+"<br>");
-    }
-  }
+//   function Employee(){ // function/class constructor and by convention the name of the function should be capitalized
+//     this.name = "John"; // this is the property of the object
+//     this.age = 30;  // this is the property of the object     
+//     this.salary = 25000; // They are also known as user defined properties/object
+//     this.dis = function(){
+//       document.write("Name: "+this.name+"<br>");
+//       document.write("Age: "+this.age+"<br>");
+//       document.write("Salary: "+this.salary+"<br>");
+//     }
+//   }
 
-  var emp = new Employee(); // this is the constructor via memory creation of the class
-  // We are calling dis function of the class Employee
-  emp.dis();
+//   var emp = new Employee(); // this is the constructor via memory creation of the class
+//   // We are calling dis function of the class Employee
+//   emp.dis();
 
-Employee.prototype.city="NYC";
-Employee.prototype.info = function(){
-  document.write("City: "+this.city+"<br>");
-}
-emp.info(); // this is the prototype function call
-
-
-
-
-
-
-
+// Employee.prototype.city="NYC"; // using the property, we can add property of the class
+// Employee.prototype.info = function(){ // we can add function of the class using prototype property
+//   document.write("City: "+this.city+"<br>");
+// }
+// emp.info(); // this is the prototype function call
 
 // Array is used to store multiple values
 // var num1 = [10,20,30,40,50,60]; // literal style array declaration
