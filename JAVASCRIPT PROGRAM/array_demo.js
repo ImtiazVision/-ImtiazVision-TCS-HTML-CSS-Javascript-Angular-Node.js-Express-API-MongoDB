@@ -1,3 +1,20 @@
+// function basics
+// this is the constructor of function where we created the function
+function func() { // function constructor
+  document.write("this is a function");
+  } 
+  // this is the function call
+  func();
+
+
+
+
+
+
+
+
+
+
 // Array is used to store multiple values
 // var num1 = [10,20,30,40,50,60]; // literal style array declaration
 // var num2 = new Array(10,20,30,40,50,60,70,80); // object style array declaration via memory allocation/creation
