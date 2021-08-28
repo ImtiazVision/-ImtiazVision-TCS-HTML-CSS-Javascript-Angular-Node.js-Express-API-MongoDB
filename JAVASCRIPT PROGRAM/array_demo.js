@@ -13,8 +13,9 @@ document.write("<br>");
 num1.push(110); // add element at the end of the array
 document.write(num1+ "<br><br>");
 // Splice method 
-// Fist parameter is the index where the new element is to be inserted and second parameter is the number of elements to be deleted
-num1.splice(0,1);
+// Fist parameter is the index where the new element is to be inserted and second parameter is the number of elements to be deleted, and 3rd parameter is the element to be inserted/replaced with the new element
+num1.splice(0,1,444);
+num1.splice(0,1,110,1000,2000,3000); // in the 3rd parameter, we can add more than one element
 document.write(num1+ "<br><br>");
 
 
