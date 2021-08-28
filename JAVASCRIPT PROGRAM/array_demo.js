@@ -21,11 +21,23 @@ for(var i =0; i < num2.length; i++) {
 
 // ES6 provides a great alternatives for loop that is forEach which takes callback function as an argument and loops through the array
 document.write("<br><br>Display the value of num1 array using callback");
-num1.forEach(display);
+num1.forEach(display); // Here we are calling the display function repeatedly until the num1 array is empty
 
 function display(n) { 
   document.write("<br><br>Using forEach function: Value of each num1 array's element is: "+ n);
 }
+
+document.write("<br><br> Another way to retrieve the value using ES5 style function keyword usage <br>");
+num1.forEach(function(n) {
+  document.write("<br><br>Using forEach feature: Value of each num1 array's element is: "+ n);
+});
+
+document.write("<br>Another way to retrieve the array elements values using ES6 style arrow function");
+
+num2.forEach(n => 
+  document.write("<br> Each array elements value is using arrow function: "+n));
+
+
 // var num1 = [1, 2, 3, 4, 5]; // literal style array
 // var num2 = new Array(1, 2, 3, 4, 5); // object style array
 
