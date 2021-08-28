@@ -1,41 +1,42 @@
 // Array is used to store multiple values
-var num1 = [10,20,30,40,50,60]; // literal style array declaration
-var num2 = new Array(10,20,30,40,50,60,70,80); // object style array declaration via memory allocation/creation
+// var num1 = [10,20,30,40,50,60]; // literal style array declaration
+// var num2 = new Array(10,20,30,40,50,60,70,80); // object style array declaration via memory allocation/creation
 
-document.write("<br>Display array as string: <br><br>");
-document.write(num1 + "<br><br>");
-document.write(num2 + "<br><br>");
-document.write(num1.join("-") + "<br><br>"); // we were able to join the array elements with a delimiter "-" because the elements are of type string
+// document.write("<br>Display array as string: <br><br>");
+// document.write(num1 + "<br><br>");
+// document.write(num2 + "<br><br>");
+// document.write(num1.join("-") + "<br><br>"); // we were able to join the array elements with a delimiter "-" because the elements are of type string
 
-// Array starts from the index position of 0 and ends at arraySize-1
+// // Array starts from the index position of 0 and ends at arraySize-1
 
-document.write("<br> Get Element using index position 0 : "+num1[0])
-document.write("<br> Get Element using index position 1 : "+num1[1])
-document.write("<br> Size on the array1 is : "+num1.length);
+// document.write("<br> Get Element using index position 0 : "+num1[0])
+// document.write("<br> Get Element using index position 1 : "+num1[1])
+// document.write("<br> Size on the array1 is : "+num1.length);
 
-document.write("<br>Display the record using for loop: <br>");
-for(var i =0; i < num2.length; i++) { 
-  document.write("<br>Value of i is:  "+ num2[i]);
-}
+// document.write("<br>Display the record using for loop: <br>");
+// for(var i =0; i < num2.length; i++) { 
+//   document.write("<br>Value of i is:  "+ num2[i]);
+// }
 
 
 // ES6 provides a great alternatives for loop that is forEach which takes callback function as an argument and loops through the array
-document.write("<br><br>Display the value of num1 array using callback");
-num1.forEach(display); // Here we are calling the display function repeatedly until the num1 array is empty
+// document.write("<br><br>Display the value of num1 array using callback");
+// num1.forEach(display); // Here we are calling the display function repeatedly until the num1 array is empty
 
-function display(n) { 
-  document.write("<br><br>Using forEach function: Value of each num1 array's element is: "+ n);
-}
+// function display(n) {  // this is the function constructor
+//   document.write("<br><br>Using forEach function: Value of each num1 array's element is: "+ n);
+// }
+// // display(n)   // this is the calling of function 
 
-document.write("<br><br> Another way to retrieve the value using ES5 style function keyword usage <br>");
-num1.forEach(function(n) {
-  document.write("<br><br>Using forEach feature: Value of each num1 array's element is: "+ n);
-});
+// document.write("<br><br> Another way to retrieve the value using ES5 style function keyword usage <br>");
+// num1.forEach(function(n) {
+//   document.write("<br><br>Using forEach feature: Value of each num1 array's element is: "+ n);
+// });
 
-document.write("<br>Another way to retrieve the array elements values using ES6 style arrow function");
+// document.write("<br>Another way to retrieve the array elements values using ES6 style arrow function");
 
-num2.forEach(n => 
-  document.write("<br> Each array elements value is using arrow function: "+n));
+// num2.forEach(n => 
+//   document.write("<br> Each array elements value is using arrow function: "+n));
 
 
 // var num1 = [1, 2, 3, 4, 5]; // literal style array
