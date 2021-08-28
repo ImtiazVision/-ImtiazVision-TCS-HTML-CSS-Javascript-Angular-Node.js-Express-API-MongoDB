@@ -1,12 +1,30 @@
 // function basics
-// this is the constructor of function where we created the function
-function func() { // function constructor
-  document.write("this is a function");
+function func() { // function declaration
+  document.write("this is a function<br><br>");
   } 
   // this is the function call
   func();
 
+  function Employee(){ // function/class constructor and by convention the name of the function should be capitalized
+    this.name = "John"; // this is the property of the object
+    this.age = 30;  // this is the property of the object     
+    this.salary = 25000; // They are also known as user defined properties/object
+    this.dis = function(){
+      document.write("Name: "+this.name+"<br>");
+      document.write("Age: "+this.age+"<br>");
+      document.write("Salary: "+this.salary+"<br>");
+    }
+  }
 
+  var emp = new Employee(); // this is the constructor via memory creation of the class
+  // We are calling dis function of the class Employee
+  emp.dis();
+
+Employee.prototype.city="NYC";
+Employee.prototype.info = function(){
+  document.write("City: "+this.city+"<br>");
+}
+emp.info(); // this is the prototype function call
 
 
 
