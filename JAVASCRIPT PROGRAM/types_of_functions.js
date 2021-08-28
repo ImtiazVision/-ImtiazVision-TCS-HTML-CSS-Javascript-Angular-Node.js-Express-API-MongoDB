@@ -1,3 +1,41 @@
+// function sum(a,b){ 
+//   let total = 0;
+  
+//   return a+b;
+// }
+// console.log(arguments);
+// document.write("Here we are calling sum function 😄" + sum(1,2,3,5,4));
+
+// // Expression style function
+// var dis1 = function() { 
+//   document.write("Expression style function<br>");
+// }
+// dis1();
+// // Arrow style function 
+// var dis2 = () => document.write("<br>Arrow style function");
+// dis2();
+
+// var addNumber = function(a,b){ 
+//   var sum = a + b;
+//   return sum;
+// }
+// document.write("<br><br>The sum of a and b is: "+ addNumber(3,5));
+
+// document.write("<br><br>We are calling the addNumber function again and sum of a & b is: "+addNumber(3,3));
+
+// // arrow function by default return values without using the return keyword
+// var sumOfNumber = (a,b) => a+b;
+// document.write("<br><br>Using Arrow function: Sum of a and b is : "+sumOfNumber(8,8));
+
+// Arrow function with multiple line statement. With Arrow function, the func
+var findLargest = (a,b) => { 
+  if(a>b){ return "a is largest" }
+  else { return "b is largest" }
+}
+document.write("<br>Find the largest😄: "+findLargest(5,6));
+
+
+
 // // // Normal Function
 // // function display(){ 
 // //   alert("This is a normal function😃");
