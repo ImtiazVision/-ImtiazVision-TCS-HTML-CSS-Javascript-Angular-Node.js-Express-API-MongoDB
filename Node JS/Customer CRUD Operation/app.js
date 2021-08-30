@@ -7,7 +7,7 @@ let cors = require("cors"); // this will load the cors module
 let app = express();
 
 // middleware
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // enable json data from request body
 app.use(cors()); // this will enable cors for usage
 
 // creating an array named customers with 2 objects/elements
@@ -55,7 +55,7 @@ app.put("/updateCustomerAge", (request,response) => {
   let cust = request.body;
   let index = customers.findIndex(c => c.cid == cust.cid);
   if (index == -1) {
-    response.json({ "msg": "No customer present with id" + cust.cid });
+    response.json({ "msg": "No customer present with id" + cust.cid })
   } else {
     customers[index].age = cust.age;
     response.json({ "msg": "Customer age updated successfully" });
@@ -74,18 +74,6 @@ app.delete("/deleteCustomerInfo/:cid", (request,response) => {
     response.json({ "msg": "Customer deleted successfully" });
   }
 } )
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

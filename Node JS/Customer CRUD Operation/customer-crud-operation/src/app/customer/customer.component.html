@@ -11,7 +11,7 @@
   </form>
 </div> -->
 <div>
-    <form [formGroup]="customerRef" (ngSubmit)="storeInfo()">
+    <form [formGroup]="customerRef" (ngSubmit)="storeInfo()"> <!-- Property Binding & when we click on the submit button, it will initiate/fire storeInfo() function-->
         <label>Customer Id</label>
         <input type="text" formControlName="cid"/><br/>
         <label>Customer Name</label>
@@ -24,30 +24,37 @@
     <br>
     <span style="color:red">{{storeMsg}}</span>
     <hr>
-    <!-- <table border="1">
-        <tr>
-            <th>Customer Id</th>
-            <th>Customer Name</th>
-            <th>Customer Age</th>
-        </tr>
-        <tr *ngFor="let customer of customers">
-            <td>{{customer.cid}}</td>
-            <td>{{customer.cname}}</td>
-            <td>{{customer.age}}</td>
-        </tr>
-    </table> -->
     <table border="1">
             <tr>
                 <th>Customer Id</th>
                 <th>Customer Name</th>
                 <th>Customer Age</th>
                 <th>Delete</th>
+                <th>Update</th>
             </tr>
             <tr *ngFor="let customer of customers">
                 <td>{{customer.cid}}</td>
                 <td>{{customer.cname}}</td>
                 <td>{{customer.age}}</td>
-                <td><input type="button" value="Delete" (click)="deleteRec(customer.cid)"/></td>
+                <td><input type="button" value="Delete"(click)="deleteRec(customer.cid)" /></td>
+                <td><input type="button" value="Update"(click)="updateAge(customer.cid,customer.age)" /></td>
             </tr>
     </table>
+    <br>
+    <span style="color:red">{{deleteMsg}}</span>
+    <br>
+    <hr>
+    <div *ngIf="flag"> <!--Starting time, flag value is false as declared in the customer.component.ts file on line number 22-->
+      <form (ngSubmit)="nowUpdateAge()">
+        <label>Customer Id</label>
+        <input type="text" [(ngModel)]="cid" name="cid" /><br/> <!-- 2 way Data Binding using ngModel -->
+        <label>Customer Age</label>
+        <input type="text" [(ngModel)]="age" name="age" /><br/> <!-- 2 way Data Binding using ngModel -->
+        <input type="submit" value="Update Age" />
+        <input type="reset" value="Reset">
+      </form>
+    </div>
+    <span style="color:red"> {{updateMsg}}</span>
 </div>
+
+<!-- (click)="deleteRec(customer.cid) -->

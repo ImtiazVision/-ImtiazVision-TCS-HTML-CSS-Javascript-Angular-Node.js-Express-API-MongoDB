@@ -10,7 +10,7 @@ let app = express();
 
 app.use(bodyParser.json());  // enable json data from request body part
 
-app.use(cors()):
+app.use(cors());
 
 let emp = {id: 100, name:"John", age:30};
 let employees = [
