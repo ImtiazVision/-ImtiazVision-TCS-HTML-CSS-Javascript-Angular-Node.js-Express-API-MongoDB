@@ -1,65 +1,65 @@
-// load the module
-// const { request, response } = require('express');
-let express = require('express');
-let bodyParser = require('body-parser');
+let express = require("express");
+let bodyParser = require("body-parser");
 
 let userDetails = [];
 
-// creating reference of the express module
+//creating the reference of express module 
 let app = express();
-// which is use to enable post data receiving from normal html forn 
-app.use(bodyParser.urlencoded({extended:true}));
+// which is use to enable post data receving from normal html form. 
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get("/",(req,res)=>{ 
-  res.send("Welcome to Express JS Simple Module");
+
+
+app.get("/", (request, response) => {
+  response.send("Welcome to Express JS Simple Module");
 })
-app.get("/aboutus", (req, res) => {
-  // res.send("Welcome to About Us Page");
-  res.sendFile(__dirname + "/aboutus.html");
+app.get("/aboutus", (request, response) => {
+  //response.send("Welcome to About us page");
+  response.sendFile(__dirname + "\\aboutus.html");
 })
-app.get("/contactus", (req, res) => {
-  // res.send("Welcome to Contact Us Page");
-  res.sendFile(__dirname + "/contactus.html");
-})
-app.get("/login", (req, res) => {
-  // res.send("Welcome Login Page");
-  res.sendFile(__dirname + "/login.html");
+app.get("/contactus", (request, response) => {
+  //response.send("Welcome to contact us page");
+  response.sendFile(__dirname + "\\contactus.html");
 })
 app.get("/index", (request, response) => {
-  // res.send("Welcome to index page");
-  // res.sendFile("C:\\Users\\ahmed\\Desktop\\01.Sandbox Practices\\01. TCS HTML CSS Javascript Angular Node.js Express API MongoDB\\Node JS\\express modules\\index.html");
-  // response.send(__dirname);
-  response.sendFile(__dirname + "/index.html");
+  //response.send("Welcome to index page");
+  //response.sendFile("C:\\Users\\91990\\Desktop\\TCS MEAN Stack Training 2021\\Notes\\MyRepository\\Node JS\\express modules\\index.html");
+  //response.send(__dirname);
+  response.sendFile(__dirname + "\\index.html");
 })
 
-app.get("/checkUser",(request,response)=>{ 
-  let username = request.query.username;
-  let password = request.query.password;
-  let found = userDetails.find(u=>u.uname==user && u.pname==pass);
-  if(found!=undefined){
-    response.send("Login Successful");
-  } else { 
-    response.send("Login Failed");
+app.get("/login", (request, response) => {
+  response.sendFile(__dirname + "\\login.html");
+})
+
+app.get("/checkUser", (request, response) => {
+  // let user = request.query.user;      // to receive text field value 
+  // let pass = request.query.pass;
+  // console.log(user);
+  // console.log(pass);
+  let user = request.query["user"];
+  let pass = request.query["pass"];
+  let found = userDetails.find(u => u.uname == user && u.pname == pass);
+  if (found != undefined) {
+    response.send("Successfully Login!");
+  } else {
+    response.send("Failure try once again!");
   }
 })
 
-app.get("/SignUp",(request,response)=>{ 
-  response.sendFile(__dirname + "/register.html");
+app.get("/SignUp", (request, response) => {
+  response.sendFile(__dirname + "\\register.html");
 })
-app.get("/register", (request, response) => {
-  response.send("Get method..");
-})
-app.post("/register",(request,response)=>{
-  // response.send("Post method..");
-  let userDetail = request.body;
-  // console.log(userDetail);
-  userDetails.push(userDetail);
-  // response.send("Account Created Successfully");
-  response.sendFile(__dirname + "/login.html");
-  })
+
+// app.get("/register",(request,response)=>{
+//     response.send("Get method...");
+// });
+
+app.post("/register", (request, response) => {
+  let userDetail = request.body;      // json data from body. 
+  userDetails.push(userDetail);       // store in array. 
+  response.sendFile(__dirname + "\\login.html");
+});
 
 
-
-
-
-app.listen(9090,()=>console.log("Server running on port number 9090"));
+app.listen(9090, () => console.log("Server running on port number 9090"))
