@@ -4,7 +4,7 @@ let userModel = require('../model/user.model');
 let signUp = async (request,response) => {
   let user = request.body; // receives data from post method
   let userInfo = userModel.findOne({email: user.email});
-  if(userInfo!=null) {
+  if(userInfo==null) {
     let result = await userModel.insertMany(user); // making it sync(wait for the result)
     response.send("Account created successfully");
   } else {

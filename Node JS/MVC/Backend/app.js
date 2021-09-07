@@ -30,5 +30,6 @@ catch(error=>console.log(error));
 // http:localhost:9090/api/product/updateProduct    : update
 // http:localhost:9090/api/product/deleteProduct    : delete
 app.use("/api/product", routerProduct);
+//http:localhost:9090/api/user/signUp     : post method signup
 app.use("/api/user",userRouter);
 app.listen(9090,()=>console.log("Server running on port number 9090"));
