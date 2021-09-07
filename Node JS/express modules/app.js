@@ -1,3 +1,5 @@
+// load the module 
+
 let express = require("express");
 let bodyParser = require("body-parser");
 
@@ -5,7 +7,7 @@ let userDetails = [];
 
 //creating the reference of express module 
 let app = express();
-// which is use to enable post data receving from normal html form. 
+// which is use to enable post data receiving from normal html form. 
 app.use(bodyParser.urlencoded({ extended: true }))
 
 
