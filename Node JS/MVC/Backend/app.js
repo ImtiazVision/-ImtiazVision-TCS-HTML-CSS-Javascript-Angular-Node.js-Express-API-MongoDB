@@ -4,7 +4,7 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let cors = require('cors');
 let routerProduct = require("./router/product.router");
-
+let userRouter = require('./router/user.router');
 
 // create the reference of express
 let app = express();
@@ -30,6 +30,5 @@ catch(error=>console.log(error));
 // http:localhost:9090/api/product/updateProduct    : update
 // http:localhost:9090/api/product/deleteProduct    : delete
 app.use("/api/product", routerProduct);
-// app.use("/api/order",routerOrder);
-// app.use("/api/login",routerLogin);
+app.use("/api/user",userRouter);
 app.listen(9090,()=>console.log("Server running on port number 9090"));
