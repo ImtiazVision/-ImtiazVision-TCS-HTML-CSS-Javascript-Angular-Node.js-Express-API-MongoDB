@@ -21,14 +21,14 @@ let employees = [
 ]
 
 // http://localhost:9090/sayPlainText
-app.get("/sayPlainText", (reques,response) => {
+app.get("/sayPlainText", (request,response) => {
     response.send("Welcome to REST API in plain text format");
 });
 
 // http://localhost:9090/sayJson
-
 app.get("/sayJson", (request,response) => { 
     // response.json({"msg": "Welcome to REST API in JSON format"})
+    // responding in json format
     response.json({"msg": emp.name });
   })
 
@@ -96,17 +96,6 @@ app.delete("/deleteEmployeeInfo/:id", (request, response) => {
   response.send("Employee details deleted using id as "+ id);
 
 })
-
-
-
-
-
-
-
-
-
-
-
 
 
 app.listen(9090, () => {
